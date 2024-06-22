@@ -1,16 +1,9 @@
-import com.dimafeng.testcontainers.GenericContainer
 import kyo.*
-import org.scalatest.BeforeAndAfterAll
 import org.scalatest.flatspec.AsyncFlatSpec
 import org.scalatest.matchers.should.Matchers
-import org.testcontainers.containers.wait.strategy.Wait
-import org.testcontainers.images.PullPolicy
-import sttp.client3.UriContext
 
-import scala.compiletime.uninitialized
-import scala.concurrent.{ExecutionContext, Future}
 
-class CustomerSpec extends AsyncFlatSpec with Matchers with BeforeAndAfterAll:
+class CustomerSpec extends AsyncFlatSpec with Matchers:
 
   val customerWorks =
     Envs.use[CustomerOps]:
